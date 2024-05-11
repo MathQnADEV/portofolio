@@ -36,7 +36,12 @@ const Wibu = () => {
                             kalo real waifu sih chevy, candu bat suarany cok
                         </span>
                     </motion.h2>
-                    <div className="hidden xl:flex">
+                    <motion.div
+                        variants={fadeIn("up", 0.4)}
+                        initial="hidden"
+                        animate="show"
+                        className="hidden xl:flex"
+                    >
                         <YouTube
                             videoId="QbPtrnmGlZ8"
                             onReady={(event) => event.target.pauseVideo}
@@ -47,8 +52,13 @@ const Wibu = () => {
                                 )
                             }
                         />
-                    </div>
-                    <div className="flex xl:hidden">
+                    </motion.div>
+                    <motion.div
+                        variants={fadeIn("up", 0.4)}
+                        initial="hidden"
+                        animate="show"
+                        className="flex xl:hidden"
+                    >
                         <YouTube
                             videoId="QbPtrnmGlZ8"
                             onReady={(event) => event.target.pauseVideo}
@@ -59,7 +69,7 @@ const Wibu = () => {
                                 )
                             }
                         />
-                    </div>
+                    </motion.div>
                 </div>
                 <Bulb />
             </div>
